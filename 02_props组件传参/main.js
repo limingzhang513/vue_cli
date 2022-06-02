@@ -10,11 +10,6 @@ import App from './App.vue'
 // vue的生产提示
 Vue.config.productionTip = false
 
-// 全局引入混合，作用于所有vc和vm
-// import {mixin, mixin2} from './mixin'
-// Vue.mixin(mixin)
-// Vue.mixin(mixin2)
-
 let person = {}  //如果配置了语法检查，这里会引起报错，vue.config.js里配置了关闭语法检查功能
 // 创建Vue实例对象
 new Vue({
