@@ -10,6 +10,10 @@ import App from './App.vue'
 // vue的生产提示
 Vue.config.productionTip = false
 
+// 引入一个插件，插件是全局的
+import plugins from './plugins'
+Vue.use(plugins, 1, 2, 3) //使用插件，插件必须在new vue() 之前导入使用, 可以传参数
+
 // 创建Vue实例对象
 new Vue({
   // el:"#app", 
