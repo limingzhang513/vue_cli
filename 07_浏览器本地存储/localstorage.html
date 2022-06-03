@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- webstorage 学习，浏览器存储 -->
+    <!-- 位置：右键  检查   Application   Local Storage  和 Session Storage -->
+    <!-- 使用live server 打开的浏览器默认存储一个：IsThisFirstTime_Log_From_LiveServer -->
+    <h2>了解localStorage</h2>
+    <button onclick="setValue()">点我存储</button>
+    <button onclick="getValue()">点我获取</button>
+    <button onclick="deleteValue()">点我删除</button>
+    <button onclick="clearValue()">点我清空</button>
+
+    <!-- 
+        1、local Storage, 本地存储，关闭浏览器也不删除，只有人为的去删除，浏览器存储谷歌大概有5M左右；
+        2、session Storage, 会话存储，表示打开浏览器进行的存储，当关闭浏览器存储就会删除；
+        3、只能存储字符串，key和value都必须是字符串，存储对象需要使用json转换一下；
+        4、localStorage 和sessionStorage军事windows的内置方法
+     -->
+</body>
+<script type="text/javascript" >
+    function setValue(){
+        // window.localStorage
+        // window.sessionStorage
+        localStorage.setItem('msg', "你好")
+        localStorage.setItem('msg1', "你好1")
+        const myjson = {"name": "李明章", "age": 18}
+        localStorage.setItem('msg2', JSON.stringify(myjson))
+    }
+    function getValue(){
+        const msg = localStorage.getItem('msg')
+        const msg2 = localStorage.getItem('msg2')
+        console.log(msg)
+        console.log(JSON.parse(msg2))
+    }
+    function deleteValue(){
+        localStorage.removeItem('msg')
+    }
+    function clearValue(){
+        localStorage.clear()
+    }
+</script>
+</html>
