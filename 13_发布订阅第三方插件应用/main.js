@@ -15,10 +15,5 @@ Vue.config.productionTip = false
 const vm = new Vue({
   // el:"#app", 
   render: h => h(App),  // 渲染一个<App></App>,表示引用组件
-  
-  // 配置全局事件总线  :  最优配置全局事件总线的方式
-  beforeCreate(){  // 在创建vm实例之前，生命周期函数
-    Vue.prototype.$bus = this  // 安装全局事件总线
-  }
 }).$mount('#app')  //绑定标签容器
 
