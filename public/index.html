@@ -8,6 +8,10 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <!-- 图标 <%= BASE_URL %>表示public目录-->
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+
+    <!-- 第三方样式一般在这里引入 -->
+    <link rel="stylesheet" href="<%= BASE_URL %>css/bootstrap.css">
+
     <!-- 配置网页的标题 webpack插件实现，去package.json去找-->
     <title><%= htmlWebpackPlugin.options.title %></title>
   </head>
